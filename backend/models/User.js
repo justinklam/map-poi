@@ -24,3 +24,5 @@ const UserSchema = new mongoose.Schema(
   // adds creation/update info
   { timestamps: true }
 );
+
+module.exports = mongoose.model("User", UserSchema);
