@@ -18,4 +18,14 @@ router.post("/", async (req, res) => {
 
 // Get POI
 
+router.get("/", async (req, res) => {
+  try {
+    // locate all POI
+    const poi = POI.find();
+    res.status(200).json(poi);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
