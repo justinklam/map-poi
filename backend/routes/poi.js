@@ -5,8 +5,15 @@ const POI = require("../models/Poi.js");
 
 // Create POI
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const newPOI = new POI(req.body);
+  try {
+    // await savedPOI, if successful, it res.status(200)
+    const savedPOI = await newPOI.save();
+    res.status(200).json(savedPOI);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Get POI
