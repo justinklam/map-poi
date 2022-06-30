@@ -17,3 +17,5 @@ router.post("/", async (req, res) => {
 });
 
 // Get POI
+
+module.exports = router;
