@@ -16,12 +16,12 @@ router.post("/", async (req, res) => {
   }
 });
 
-// Get POI
+// Get All POI
 
 router.get("/", async (req, res) => {
   try {
     // locate all POI
-    const poi = POI.find();
+    const poi = await POI.find();
     res.status(200).json(poi);
   } catch (err) {
     res.status(500).json(err);
