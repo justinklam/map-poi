@@ -9,6 +9,7 @@ dotenv.config();
 
 // Routes
 const poiRoute = require("./routes/poi");
+const userRoute = require("./routes/users");
 
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -22,6 +23,7 @@ mongoose
 
 // Use Routes
 app.use("/api/poi", poiRoute);
+app.use("/api/users", userRoute);
 
 app.listen(8080, () => {
   console.log(`Express server is running on Port 8080! 🐅`);
