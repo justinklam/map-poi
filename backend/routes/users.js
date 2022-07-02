@@ -44,9 +44,8 @@ router.post("/login", async (req, res) => {
 
     !validatePassword && res.status(400).json("Incorrect login credentials!");
 
-    res.status(200).json({ _id: user._id, username: username });
-
     // if validation is sucessful, send res
+    res.status(200).json({ _id: user._id, username: username });
   } catch (err) {
     res.status(500).json(err);
   }
