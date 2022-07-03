@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactMapGL from "react-map-gl";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     height: "100vh",
     latitude: 37.7577,
     longitude: -122.4376,
-    zoom: 8,
+    zoom: 10,
   });
 
   return (
