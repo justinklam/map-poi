@@ -3,6 +3,10 @@
 /backend/.env
 
 # Frontend
+
+# .env
+.env
+
 # dependencies
 ./node_modules
 ./.pnp
