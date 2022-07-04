@@ -26,7 +26,7 @@ function App() {
           offsetLeft={-20}
           offsetTop={-10}
         >
-          <Room />
+          <Room style={{ fontSize: viewport.zoom * 7, color: "slateblue" }} />
         </Marker>
       </ReactMapGL>
     </div>
