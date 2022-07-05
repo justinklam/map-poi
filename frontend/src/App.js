@@ -19,6 +19,7 @@ function App() {
         {...viewport}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
       >
         <Marker
           latitude={43.6548}
