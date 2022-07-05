@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import "./app.css";
 
 // MUI
 import { Room, Star } from "@material-ui/icons";
