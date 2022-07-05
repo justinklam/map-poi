@@ -5,3 +5,11 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
+label {
+  width: max-content;
+  color: rgb(250, 100, 70);
+  font-size: 13px;
+  border-bottom: 0.5px solid rgb(250, 100, 70);
+  margin: 3px 0;
+}
