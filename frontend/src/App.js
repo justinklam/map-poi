@@ -34,9 +34,16 @@ function App() {
           longitude={-79.3726}
           closeButton={true}
           closeOnClick={false}
-          anchor="top"
+          anchor="left"
         >
-          <div>You are here</div>
+          <div className="card">
+            <label>Place</label>
+            <h4 className="place">Moss Park</h4>
+            <label>Review</label>
+            <p>Great location</p>
+            <label>Rating</label>
+            <label>Information</label>
+          </div>
         </Popup>
       </ReactMapGL>
     </div>
