@@ -13,3 +13,11 @@ label {
   border-bottom: 0.5px solid rgb(250, 100, 70);
   margin: 3px 0;
 }
+
+.desc {
+  font-size: 14px;
+}
+
+.star {
+  color: gold;
+}
