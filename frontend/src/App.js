@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 
 // MUI
-import { Room } from "@material-ui/icons";
+import { Room, Star } from "@material-ui/icons";
 
 function App() {
   const [viewport, setViewport] = useState({
@@ -42,7 +42,18 @@ function App() {
             <label>Review</label>
             <p>Great location</p>
             <label>Rating</label>
+            <div className="stars">
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+            </div>
             <label>Information</label>
+            <span className="username">
+              Created by <b>JL</b>
+            </span>
+            <span className="date">1 hour ago</span>
           </div>
         </Popup>
       </ReactMapGL>
