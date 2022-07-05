@@ -41,14 +41,14 @@ function App() {
             <label>Place</label>
             <h4 className="place">Moss Park</h4>
             <label>Review</label>
-            <p>Great location</p>
+            <p className="desc">Great location</p>
             <label>Rating</label>
             <div className="stars">
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
+              <Star className="star" />
             </div>
             <label>Information</label>
             <span className="username">
