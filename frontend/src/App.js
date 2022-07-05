@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 
 // MUI
 import { Room } from "@material-ui/icons";
@@ -29,6 +29,15 @@ function App() {
         >
           <Room style={{ fontSize: viewport.zoom * 7, color: "slateblue" }} />
         </Marker>
+        <Popup
+          latitude={43.6548}
+          longitude={-79.3726}
+          closeButton={true}
+          closeOnClick={false}
+          anchor="top"
+        >
+          <div>You are here</div>
+        </Popup>
       </ReactMapGL>
     </div>
   );
