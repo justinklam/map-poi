@@ -11,8 +11,11 @@ function App() {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
-    latitude: 43.65107,
-    longitude: -79.347015,
+    latitude: 43,
+    longitude: -79,
+    // Toronto
+    // latitude: 43.65107,
+    // longitude: -79.347015,
     zoom: 12,
   });
 
@@ -43,6 +46,9 @@ function App() {
             <Marker
               latitude={p.lat}
               longitude={p.long}
+              // Moss Park
+              // latitude={43.6548}
+              // longitude={-79.3726}
               offsetLeft={-20}
               offsetTop={-10}
             >
@@ -54,8 +60,6 @@ function App() {
             <Popup
               latitude={p.lat}
               longitude={p.long}
-              // latitude={43.6548}
-              // longitude={-79.3726}
               closeButton={true}
               closeOnClick={false}
               anchor="left"
