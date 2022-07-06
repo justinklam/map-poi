@@ -30,7 +30,7 @@ function App() {
         >
           <Room style={{ fontSize: viewport.zoom * 7, color: "slateblue" }} />
         </Marker>
-        <Popup
+        {/* <Popup
           latitude={43.6548}
           longitude={-79.3726}
           closeButton={true}
@@ -56,7 +56,7 @@ function App() {
             </span>
             <span className="date">1 hour ago</span>
           </div>
-        </Popup>
+        </Popup> */}
       </ReactMapGL>
     </div>
   );
