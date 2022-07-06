@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import axios from "axios";
 import "./app.css";
 
 // MUI
 import { Room, Star } from "@material-ui/icons";
 
 function App() {
+  const [POI, setPOI] = useState([]);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -14,13 +16,18 @@ function App() {
     zoom: 12,
   });
 
+  // retrieve POI from backend
   useEffect(() => {
     const getPOIS = async () => {
       try {
+        // reading from proxy - only require /poi
+        const res = await axios.get("/poi");
+        setPOI(res.data);
       } catch (err) {
         console.log(`Get POI Error`, err);
       }
     };
+    getPOIS();
   }, []);
 
   return (
