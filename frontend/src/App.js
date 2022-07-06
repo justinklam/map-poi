@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import "./app.css";
 
@@ -13,6 +13,15 @@ function App() {
     longitude: -79.347015,
     zoom: 12,
   });
+
+  useEffect(() => {
+    const getPOIS = async () => {
+      try {
+      } catch (err) {
+        console.log(`Get POI Error`, err);
+      }
+    };
+  }, []);
 
   return (
     <div className="App">
