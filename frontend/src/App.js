@@ -38,15 +38,20 @@ function App() {
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/mapbox/streets-v11"
       >
-        <Marker
-          latitude={43.6548}
-          longitude={-79.3726}
-          offsetLeft={-20}
-          offsetTop={-10}
-        >
-          <Room style={{ fontSize: viewport.zoom * 7, color: "slateblue" }} />
-        </Marker>
-        {/* <Popup
+        {POI.map((p) => (
+          <>
+            <Marker
+              latitude={p.lat}
+              longitude={p.long}
+              offsetLeft={-20}
+              offsetTop={-10}
+            >
+              <Room
+                style={{ fontSize: viewport.zoom * 7, color: "slateblue" }}
+              />
+            </Marker>
+
+            {/* <Popup
           latitude={43.6548}
           longitude={-79.3726}
           closeButton={true}
@@ -73,6 +78,8 @@ function App() {
             <span className="date">1 hour ago</span>
           </div>
         </Popup> */}
+          </>
+        ))}
       </ReactMapGL>
     </div>
   );
