@@ -24,6 +24,7 @@ router.post("/register", async (req, res) => {
     res.status(200).json(user._id);
     console.log("User Created");
   } catch (err) {
+    console.log(`User Creation Error`, err);
     res.status(500).json(err);
   }
 });
