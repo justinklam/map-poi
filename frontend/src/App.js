@@ -11,11 +11,11 @@ function App() {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
-    latitude: 43,
-    longitude: -79,
+    // latitude: 43,
+    // longitude: -79,
     // Toronto
-    // latitude: 43.65107,
-    // longitude: -79.347015,
+    latitude: 43.65107,
+    longitude: -79.347015,
     zoom: 12,
   });
 
