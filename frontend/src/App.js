@@ -9,6 +9,7 @@ import { Room, Star } from "@material-ui/icons";
 
 function App() {
   const [POI, setPOI] = useState([]);
+  const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
