@@ -35,6 +35,10 @@ function App() {
     getPOIS();
   }, []);
 
+  const handleMarkerClick = (id) => {
+    setCurrentPlaceId(id);
+  };
+
   return (
     <div className="App">
       <ReactMapGL
@@ -56,6 +60,7 @@ function App() {
             >
               <Room
                 style={{ fontSize: viewport.zoom * 7, color: "slateblue" }}
+                onClick={() => handleMarkerClick(p._id)}
               />
             </Marker>
 
