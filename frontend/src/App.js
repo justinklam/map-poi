@@ -8,6 +8,7 @@ import { format } from "timeago.js";
 import { Room, Star } from "@material-ui/icons";
 
 function App() {
+  const currentUser = "placeholderUser";
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [viewport, setViewport] = useState({
@@ -61,7 +62,8 @@ function App() {
               <Room
                 style={{
                   fontSize: viewport.zoom * 7,
-                  color: "slateblue",
+                  // if poi's user is === currentUser = color is red else blue
+                  color: p.username === currentUser ? "#0000ff" : "#896fbc",
                   cursor: "pointer",
                 }}
                 onClick={() => handleMarkerClick(p._id)}
@@ -80,7 +82,7 @@ function App() {
                   <label>Place</label>
                   <h4 className="place">{p.title}</h4>
                   <label>Review</label>
-                  <p className="desc">{p.desc}</p>
+                  <p className="desc">{p.description}</p>
                   <label>Rating</label>
                   <div className="stars">
                     <Star className="star" />
