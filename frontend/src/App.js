@@ -70,6 +70,7 @@ function App() {
                 closeButton={true}
                 closeOnClick={false}
                 anchor="left"
+                onClose={() => setCurrentPlaceId(null)}
               >
                 <div className="card">
                   <label>Place</label>
