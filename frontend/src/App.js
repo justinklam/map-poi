@@ -63,34 +63,35 @@ function App() {
                 onClick={() => handleMarkerClick(p._id)}
               />
             </Marker>
-
-            <Popup
-              latitude={p.lat}
-              longitude={p.long}
-              closeButton={true}
-              closeOnClick={false}
-              anchor="left"
-            >
-              <div className="card">
-                <label>Place</label>
-                <h4 className="place">{p.title}</h4>
-                <label>Review</label>
-                <p className="desc">{p.desc}</p>
-                <label>Rating</label>
-                <div className="stars">
-                  <Star className="star" />
-                  <Star className="star" />
-                  <Star className="star" />
-                  <Star className="star" />
-                  <Star className="star" />
+            {p._id === currentPlaceId && (
+              <Popup
+                latitude={p.lat}
+                longitude={p.long}
+                closeButton={true}
+                closeOnClick={false}
+                anchor="left"
+              >
+                <div className="card">
+                  <label>Place</label>
+                  <h4 className="place">{p.title}</h4>
+                  <label>Review</label>
+                  <p className="desc">{p.desc}</p>
+                  <label>Rating</label>
+                  <div className="stars">
+                    <Star className="star" />
+                    <Star className="star" />
+                    <Star className="star" />
+                    <Star className="star" />
+                    <Star className="star" />
+                  </div>
+                  <label>Information</label>
+                  <span className="username">
+                    Created by <b>{p.username}</b>
+                  </span>
+                  <span className="date">{format(p.createdAt)}</span>
                 </div>
-                <label>Information</label>
-                <span className="username">
-                  Created by <b>{p.username}</b>
-                </span>
-                <span className="date">{format(p.createdAt)}</span>
-              </div>
-            </Popup>
+              </Popup>
+            )}
           </>
         ))}
       </ReactMapGL>
