@@ -115,14 +115,18 @@ function App() {
             )}
           </>
         ))}
-        {/* <Popup
-          latitude={}
-          longitude={}
-          closeButton={true}
-          closeOnClick={false}
-          anchor="left"
-          onClose={() => setCurrentPlaceId(null)}
-        >Hello</Popup> */}
+        {newPlace && (
+          <Popup
+            latitude={newPlace.lat}
+            longitude={newPlace.long}
+            closeButton={true}
+            closeOnClick={false}
+            anchor="left"
+            onClose={() => setCurrentPlaceId(null)}
+          >
+            Hello
+          </Popup>
+        )}
       </ReactMapGL>
     </div>
   );
