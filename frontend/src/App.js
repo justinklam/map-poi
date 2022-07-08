@@ -11,6 +11,7 @@ function App() {
   const currentUser = "placeholderUser";
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
+  const [newPlace, setNewPlace] = useState(null);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -40,6 +41,10 @@ function App() {
     setCurrentPlaceId(id);
   };
 
+  const handleAddClick = (e) => {
+    console.log(e);
+  };
+
   return (
     <div className="App">
       <ReactMapGL
@@ -47,6 +52,7 @@ function App() {
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/mapbox/streets-v11"
+        onDblClick={handleAddClick}
       >
         {POI.map((p) => (
           <>
@@ -101,6 +107,14 @@ function App() {
             )}
           </>
         ))}
+        {/* <Popup
+          latitude={}
+          longitude={}
+          closeButton={true}
+          closeOnClick={false}
+          anchor="left"
+          onClose={() => setCurrentPlaceId(null)}
+        >Hello</Popup> */}
       </ReactMapGL>
     </div>
   );
