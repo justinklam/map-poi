@@ -42,7 +42,15 @@ function App() {
   };
 
   const handleAddClick = (e) => {
-    console.log(e);
+    const [long, lat] = e.lngLat;
+
+    // field is provided as the name is the same
+    setNewPlace({
+      lat,
+      long,
+    });
+
+    console.log(newPlace);
   };
 
   return (
