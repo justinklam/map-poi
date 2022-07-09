@@ -63,6 +63,8 @@ function App() {
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         onDblClick={handleAddClick}
+        // zoom on marker speed
+        transitionDuration="200"
       >
         {POI.map((p) => (
           <>
