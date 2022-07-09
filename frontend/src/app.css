@@ -42,3 +42,9 @@ input {
   border: none;
   border-bottom: 1px solid grey;
 }
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 12px;
+  color: rgb(180, 180, 180);
+}
