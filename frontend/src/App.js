@@ -128,7 +128,17 @@ function App() {
             anchor="left"
             onClose={() => setNewPlace(null)}
           >
-            Hello
+            <div>
+              <form>
+                <label>Title</label>
+                <input placeholder="Enter a Title"></input>
+                <label>Review</label>
+                <label>Rating</label>
+                <button className="submitButton" type="submit">
+                  Add Pin
+                </button>
+              </form>
+            </div>
           </Popup>
         )}
       </ReactMapGL>
