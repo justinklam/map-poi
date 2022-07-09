@@ -37,7 +37,7 @@ function App() {
     getPOIS();
   }, []);
 
-  const handleMarkerClick = (id) => {
+  const handleMarkerClick = (id, lat, long) => {
     setCurrentPlaceId(id);
   };
 
@@ -80,7 +80,7 @@ function App() {
                   color: p.username === currentUser ? "#0000ff" : "#896fbc",
                   cursor: "pointer",
                 }}
-                onClick={() => handleMarkerClick(p._id)}
+                onClick={() => handleMarkerClick(p._id, p.lat, p.long)}
               />
             </Marker>
             {p._id === currentPlaceId && (
