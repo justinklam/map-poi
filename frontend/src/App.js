@@ -39,6 +39,8 @@ function App() {
 
   const handleMarkerClick = (id, lat, long) => {
     setCurrentPlaceId(id);
+    // spread viewport and duplicate. set lat/long to parameters from click
+    setViewport({ ...viewport, latitude: lat, longitude: long });
   };
 
   const handleAddClick = (e) => {
