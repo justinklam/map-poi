@@ -133,7 +133,15 @@ function App() {
                 <label>Title</label>
                 <input placeholder="Enter a Title"></input>
                 <label>Review</label>
+                <textarea placeholder="Describe the Place"></textarea>
                 <label>Rating</label>
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
                 <button className="submitButton" type="submit">
                   Add Pin
                 </button>
