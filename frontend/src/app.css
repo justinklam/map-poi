@@ -62,4 +62,18 @@ textarea::placeholder {
 .button {
   border: none;
   padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.logout {
+  background-color: rgb(220, 40, 1);
+}
+
+.login {
+  background-color: rgb(1, 110, 110);
+}
+
+.register {
+  background-color: rgb(105, 90, 200);
 }
