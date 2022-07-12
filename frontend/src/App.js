@@ -58,6 +58,10 @@ function App() {
     console.log(newPlace);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="App">
       <ReactMapGL
@@ -132,7 +136,7 @@ function App() {
             onClose={() => setNewPlace(null)}
           >
             <div>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label>Title</label>
                 <input
                   placeholder="Enter a Title"
