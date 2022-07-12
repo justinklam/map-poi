@@ -134,11 +134,17 @@ function App() {
             <div>
               <form>
                 <label>Title</label>
-                <input placeholder="Enter a Title"></input>
+                <input
+                  placeholder="Enter a Title"
+                  onChange={(e) => setTitle(e.target.value)}
+                ></input>
                 <label>Review</label>
-                <textarea placeholder="Describe the Place"></textarea>
-                <label>Rating</label>
-                <select>
+                <textarea
+                  placeholder="Describe the Place"
+                  onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
+                <label>Rating </label>
+                <select onChange={(e) => setRating(e.target.value)}>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
