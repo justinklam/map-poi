@@ -58,7 +58,7 @@ function App() {
     console.log(newPlace);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newPOI = {
       username: currentUser,
@@ -68,6 +68,15 @@ function App() {
       lat: newPlace.lat,
       long: newPlace.long,
     };
+
+    try {
+      // send newPOI to post route
+      const res = await axios.post("/poi", newPOI);
+      setPOI([...POI, res.data]);
+      setNewPlace(null);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
