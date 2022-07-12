@@ -58,3 +58,8 @@ textarea::placeholder {
   background-color: rgb(220, 40, 1);
   cursor: pointer;
 }
+
+.button {
+  border: none;
+  padding: 5px;
+}
