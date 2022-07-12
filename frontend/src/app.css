@@ -52,4 +52,9 @@ textarea::placeholder {
 
 .submitButton {
   border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(220, 40, 1);
+  cursor: pointer;
 }
