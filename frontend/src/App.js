@@ -60,6 +60,14 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newPOI = {
+      username: currentUser,
+      title,
+      description,
+      rating,
+      lat: newPlace.lat,
+      long: newPlace.long,
+    };
   };
 
   return (
