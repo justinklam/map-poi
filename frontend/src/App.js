@@ -95,11 +95,8 @@ function App() {
             <Marker
               latitude={p.lat}
               longitude={p.long}
-              // Moss Park
-              // latitude={43.6548}
-              // longitude={-79.3726}
-              offsetLeft={-20}
-              offsetTop={-10}
+              offsetLeft={-viewport.zoom * 3.5}
+              offsetTop={-viewport.zoom * 7}
             >
               <Room
                 style={{
