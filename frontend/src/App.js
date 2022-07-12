@@ -174,9 +174,9 @@ function App() {
             </div>
           </Popup>
         )}
-        <button classname="button login">Log In</button>
-        <button classname="button logout">Log Out</button>
-        <button classname="button register">Register</button>
+        <button className="button logout">Log Out</button>
+        <button className="button login">Log In</button>
+        <button className="button register">Register</button>
       </ReactMapGL>
     </div>
   );
