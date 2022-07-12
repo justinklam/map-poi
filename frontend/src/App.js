@@ -12,6 +12,9 @@ function App() {
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
+  const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
+  const [rating, setRating] = useState(0);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
