@@ -127,11 +127,9 @@ function App() {
                   <p className="desc">{p.description}</p>
                   <label>Rating</label>
                   <div className="stars">
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
-                    <Star className="star" />
+                    {/* Array.fill used cause not jsx */}
+                    {/* take rating as a number. fill it with the same amount of stars */}
+                    {Array(p.rating).fill(<Star className="star" />)}
                   </div>
                   <label>Information</label>
                   <span className="username">
