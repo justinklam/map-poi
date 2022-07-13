@@ -8,7 +8,7 @@ import { format } from "timeago.js";
 import { Room, Star } from "@material-ui/icons";
 
 function App() {
-  const currentUser = "placeholderUser";
+  const [currentUser, setCurrentUser] = useState(null);
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
