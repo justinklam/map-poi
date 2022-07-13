@@ -4,6 +4,9 @@ import axios from "axios";
 import "./app.css";
 import { format } from "timeago.js";
 
+// Components
+import Register from "./components/register/Register";
+
 // MUI
 import { Room, Star } from "@material-ui/icons";
 
@@ -183,6 +186,7 @@ function App() {
             <button className="button register">Register</button>
           </div>
         )}
+        <Register />
       </ReactMapGL>
     </div>
   );
