@@ -3,7 +3,7 @@ import axios from "axios";
 import "./register.css";
 
 // MUI
-import { Room } from "@material-ui/icons";
+import { Cancel, Room } from "@material-ui/icons";
 
 const Register = () => {
   const [success, setSuccess] = useState(false);
@@ -47,6 +47,7 @@ const Register = () => {
         )}
         {error && <span className="failure">Credentials Denied!</span>}
       </form>
+      <Cancel classname="registerCancel" />
     </div>
   );
 };
