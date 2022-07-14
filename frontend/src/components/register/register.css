@@ -29,3 +29,15 @@
   color: white;
   background-color: rgb(1, 110, 110);
 }
+
+.success {
+  color: green;
+  font-size: 12px;
+  text-align: center;
+}
+
+.failure {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
