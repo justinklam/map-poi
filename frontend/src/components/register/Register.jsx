@@ -11,13 +11,22 @@ const Register = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newUser = {
+      username: nameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+    };
+  };
+
   return (
     <div className="registerContainer">
       <div className="logo">
         <Room />
         Map-POI
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" placeholder="username" ref={nameRef} />
         <input type="email" placeholder="email" ref={emailRef} />
         <input type="password" placeholder="password" ref={passwordRef} />
