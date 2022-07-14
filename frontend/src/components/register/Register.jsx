@@ -16,6 +16,10 @@ const Register = () => {
         <input type="email" placeholder="email" />
         <input type="password" placeholder="password" />
         <button className="registerBtn">Register</button>
+        <span className="success">
+          Credentials Accepted! You may login now!
+        </span>
+        <span className="failure">Credentials Denied!</span>
       </form>
     </div>
   );
