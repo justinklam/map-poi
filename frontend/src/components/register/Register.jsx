@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import axios from "axios";
 import "./register.css";
 
 // MUI
@@ -11,13 +12,21 @@ const Register = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newUser = {
       username: nameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
     };
+
+    try {
+      await axios.post("/users/register", newUser);
+      setError(false);
+      setSuccess(true);
+    } catch (err) {
+      setError(true);
+    }
   };
 
   return (
