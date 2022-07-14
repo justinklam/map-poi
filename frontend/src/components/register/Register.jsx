@@ -1,10 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import "./register.css";
 
 // MUI
 import { Room } from "@material-ui/icons";
 
 const Register = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   return (
     <div className="registerContainer">
       <div className="logo">
@@ -16,10 +19,12 @@ const Register = () => {
         <input type="email" placeholder="email" />
         <input type="password" placeholder="password" />
         <button className="registerBtn">Register</button>
-        <span className="success">
-          Credentials Accepted! You may login now!
-        </span>
-        <span className="failure">Credentials Denied!</span>
+        {success && (
+          <span className="success">
+            Credentials Accepted! You may login now!
+          </span>
+        )}
+        {error && <span className="failure">Credentials Denied!</span>}
       </form>
     </div>
   );
