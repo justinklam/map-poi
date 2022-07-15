@@ -198,8 +198,9 @@ function App() {
           </div>
         )}
         {/* if showRegister state is true, show Register component */}
-        {showRegister && <Register />}
-        {showLogin && <Login />}
+        {/* pass in state as a prop to the component*/}
+        {showRegister && <Register setShowRegister={setShowRegister} />}
+        {showLogin && <Login setShowLogin={setShowLogin} />}
       </ReactMapGL>
     </div>
   );

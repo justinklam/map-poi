@@ -5,7 +5,7 @@ import "./register.css";
 // MUI
 import { Cancel, Room } from "@material-ui/icons";
 
-const Register = () => {
+const Register = ({ setShowRegister }) => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const nameRef = useRef();
