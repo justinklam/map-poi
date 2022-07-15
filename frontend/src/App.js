@@ -18,6 +18,9 @@ function App() {
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [rating, setRating] = useState(0);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
+
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -182,8 +185,15 @@ function App() {
           <button className="button logout">Log Out</button>
         ) : (
           <div className="buttons">
-            <button className="button login">Log In</button>
-            <button className="button register">Register</button>
+            <button className="button login" onClick={() => setShowLogin(true)}>
+              Log In
+            </button>
+            <button
+              className="button register"
+              onClick={() => setShowRegister(true)}
+            >
+              Register
+            </button>
           </div>
         )}
         <Register />
