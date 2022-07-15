@@ -28,6 +28,7 @@
   border-radius: 5px;
   color: white;
   background-color: rgb(1, 110, 110);
+  cursor: pointer;
 }
 
 .success {
@@ -46,4 +47,5 @@
   position: absolute;
   top: 5px;
   right: 5px;
+  cursor: pointer;
 }
