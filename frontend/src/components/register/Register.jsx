@@ -47,7 +47,7 @@ const Register = () => {
         )}
         {error && <span className="failure">Credentials Denied!</span>}
       </form>
-      <Cancel classname="registerCancel" />
+      <Cancel className="registerCancel" />
     </div>
   );
 };

@@ -41,3 +41,9 @@
   font-size: 12px;
   text-align: center;
 }
+
+.registerCancel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
