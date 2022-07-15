@@ -6,6 +6,7 @@ import { format } from "timeago.js";
 
 // Components
 import Register from "./components/register/Register";
+import Login from "./components/login/Login";
 
 // MUI
 import { Room, Star } from "@material-ui/icons";
@@ -196,7 +197,9 @@ function App() {
             </button>
           </div>
         )}
-        <Register />
+        {/* if showRegister state is true, show Register component */}
+        {showRegister && <Register />}
+        {showLogin && <Login />}
       </ReactMapGL>
     </div>
   );
