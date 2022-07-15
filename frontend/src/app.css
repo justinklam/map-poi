@@ -73,10 +73,21 @@ textarea::placeholder {
 
 .login {
   background-color: rgb(1, 110, 110);
+  margin-right: 15px;
+  opacity: 80%;
+}
+
+.login:hover {
+  opacity: 100%;
 }
 
 .register {
   background-color: rgb(105, 90, 200);
+  opacity: 80%;
+}
+
+.register:hover {
+  opacity: 100%;
 }
 
 .buttons,
