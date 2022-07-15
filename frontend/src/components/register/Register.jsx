@@ -47,7 +47,10 @@ const Register = ({ setShowRegister }) => {
         )}
         {error && <span className="failure">Credentials Denied!</span>}
       </form>
-      <Cancel className="registerCancel" />
+      <Cancel
+        className="registerCancel"
+        onClick={() => setShowRegister(false)}
+      />
     </div>
   );
 };
