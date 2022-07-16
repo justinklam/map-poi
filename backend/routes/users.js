@@ -37,6 +37,7 @@ router.post("/login", async (req, res) => {
 
     // if user is not found
     !user && res.status(400).json("Incorrect login credentials!");
+
     // validate password
     const validatePassword = await bcrypt.compare(
       req.body.password,
