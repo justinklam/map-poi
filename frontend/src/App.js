@@ -12,6 +12,8 @@ import Login from "./components/login/Login";
 import { Room, Star } from "@material-ui/icons";
 
 function App() {
+  const myStorage = window.localStorage;
+
   const [currentUser, setCurrentUser] = useState(null);
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
@@ -200,7 +202,9 @@ function App() {
         {/* if showRegister state is true, show Register component */}
         {/* pass in state as a prop to the component*/}
         {showRegister && <Register setShowRegister={setShowRegister} />}
-        {showLogin && <Login setShowLogin={setShowLogin} />}
+        {showLogin && (
+          <Login setShowLogin={setShowLogin} myStorage={myStorage} />
+        )}
       </ReactMapGL>
     </div>
   );
