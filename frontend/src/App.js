@@ -88,6 +88,8 @@ function App() {
     }
   };
 
+  const handleLogout = () => {};
+
   return (
     <div className="App">
       <ReactMapGL
@@ -185,7 +187,9 @@ function App() {
         )}
         {/* if currentUser exists. show logout. else show others */}
         {currentUser ? (
-          <button className="button logout">Log Out</button>
+          <button className="button logout" onClick={handleLogout}>
+            Log Out
+          </button>
         ) : (
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
