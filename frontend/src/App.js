@@ -88,7 +88,11 @@ function App() {
     }
   };
 
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    // remove user key from myStorage
+    myStorage.removeItem("user");
+    setCurrentUser(null);
+  };
 
   return (
     <div className="App">
