@@ -5,7 +5,7 @@ import "./login.css";
 // MUI
 import { Cancel, Room } from "@material-ui/icons";
 
-const Login = ({ setShowLogin, myStorage }) => {
+const Login = ({ setShowLogin, myStorage, setCurrentUser }) => {
   const [error, setError] = useState(false);
   const nameRef = useRef();
   const passwordRef = useRef();
@@ -22,6 +22,7 @@ const Login = ({ setShowLogin, myStorage }) => {
       const res = await axios.post("/users/login", user);
       myStorage.setItem("user", res.data.username);
       setError(false);
+      setCurrentUser(res.data.username);
     } catch (err) {
       setError(true);
     }
