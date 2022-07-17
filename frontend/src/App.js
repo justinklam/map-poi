@@ -203,7 +203,11 @@ function App() {
         {/* pass in state as a prop to the component*/}
         {showRegister && <Register setShowRegister={setShowRegister} />}
         {showLogin && (
-          <Login setShowLogin={setShowLogin} myStorage={myStorage} />
+          <Login
+            setShowLogin={setShowLogin}
+            myStorage={myStorage}
+            setCurrentUser={setCurrentUser}
+          />
         )}
       </ReactMapGL>
     </div>
