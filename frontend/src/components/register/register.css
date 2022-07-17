@@ -20,6 +20,7 @@
   color: rgb(1, 110, 110);
   display: flex;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .registerBtn {
