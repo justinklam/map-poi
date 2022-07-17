@@ -14,7 +14,7 @@ import { Room, Star } from "@material-ui/icons";
 function App() {
   const myStorage = window.localStorage;
 
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(myStorage.getItem("user"));
   const [POI, setPOI] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
