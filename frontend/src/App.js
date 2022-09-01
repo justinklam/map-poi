@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import axios from "axios";
 import "./app.css";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { format } from "timeago.js";
 
 // Components
@@ -21,6 +21,7 @@ function App() {
   const [title, setTitle] = useState(null);
   const [description, setDescription] = useState(null);
   const [rating, setRating] = useState(0);
+
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
