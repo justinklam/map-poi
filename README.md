@@ -8,13 +8,13 @@
 ## Preview
 
 <p>Main Page</p>
-<img src="./public/img/screenshots/main.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src="./public/img/screenshots/main.png" style="border-radius:10px;margin-bottom:1rem;" />
 <p>Info-Card</p>
-<img src="./public/img/screenshots/info-card.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src="./public/img/screenshots/info-card.png"  style="border-radius:10px;margin-bottom:1rem;" />
 <p>Submission</p>
-<img src="./public/img/screenshots/submission-form.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src="./public/img/screenshots/submission-form.png"  style="border-radius:10px;margin-bottom:1rem;" />
 <p>Register</p>
-<img src="./public/img/screenshots/register.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src="./public/img/screenshots/register.png"  style="border-radius:10px;margin-bottom:1rem;" />
 
 ### Tech stack
 
