@@ -8,7 +8,7 @@
 ## Preview
 
 <p>Main Page</p>
-<img src="./public/img/screenshots/main.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
+<img src="../public/img/screenshots/main.png" height="500" width="700" style="border-radius:10px;margin-bottom:1rem;" />
 
 ### Tech stack
 
